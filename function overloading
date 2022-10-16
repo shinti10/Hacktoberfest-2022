@@ -1,0 +1,50 @@
+#include<iostream>
+#include<conio.h>
+class A
+{
+private:
+      int x;
+public:
+     A()
+     {
+         x = 0;
+         cout << "\n A\'s Def. constructor.";
+     }
+     A( int a )
+     {
+         x = a;
+         cout<< "\n A\'s para.constructor.";
+     }
+     void show()
+     {
+         cout<< "\n x : " << x;
+     }
+};
+class B : public A
+{
+private:
+      int y;
+public:
+     B() : A()
+     {
+          y = 0;
+          cout<< "\n B\'s Def. constructor.";
+     }
+     B( int a, int b ) : A(a)
+     {
+          y = b;
+          cout << "\n B\'s para.constructor.";
+     }
+     void show()
+     {
+          cout << "\n y : " << y;
+     }
+};
+void main()
+{
+    cirscr();
+    B b1(10, 20);
+    b1.show();
+    getch();
+}
+          
